@@ -1,0 +1,32 @@
+public class Main {
+
+    public static void main(String[] args) {
+
+        Pessoa p = new Pessoa("Carlos", "9999-9999", "111");
+        Aluno a = new Aluno("Ana", "8888-8888", "222", "2025");
+        Funcionario f = new Funcionario("João", "7777-7777",
+                                        "333", 10, "Secretário");
+
+        Professor prof = new Professor("Marcos", "6666-6666",
+                                       "444", 20,
+                                       "Professor", "Mestre");
+
+        Aluno[] lista = {a};
+
+        Responsavel r = new Responsavel("Maria",
+                                        "5555-5555",
+                                        "555",
+                                        lista);
+
+        
+        p.saudacao();
+        a.saudacao();
+        f.saudacao();
+        prof.saudacao();
+        r.saudacao();
+
+        a.aprende();
+        f.desempenhaFuncao();
+        prof.ensina();
+    }
+}
