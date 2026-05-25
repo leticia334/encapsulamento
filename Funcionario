@@ -1,1 +1,16 @@
+class Funcionario extends Pessoa {
+    double cod;
+    String funcao;
 
+    Funcionario(String nome, String fone, String cpf,
+                double cod, String funcao) {
+
+        super(nome, fone, cpf);
+        this.cod = cod;
+        this.funcao = funcao;
+    }
+
+    String desempenhaFuncao() {
+        return nome + " trabalha como " + funcao;
+    }
+}
