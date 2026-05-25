@@ -1,14 +1,10 @@
-public class Responsavel extends Pessoa {
+class Responsavel extends Pessoa {
+    String aluno;
 
-    private Aluno[] alunos;
+    Responsavel(String nome, String fone,
+                String cpf, String aluno) {
 
-    public Responsavel(String nome, String fone, String cpf, Aluno[] alunos) {
         super(nome, fone, cpf);
-        this.alunos = alunos;
-    }
-
-    @Override
-    public void saudacao() {
-        System.out.println("Olá, sou responsável pelos alunos.");
+        this.aluno = aluno;
     }
 }
