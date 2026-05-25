@@ -1,20 +1,19 @@
-public class Professor extends Funcionario {
+class Professor extends Aluno {
+    String titulo;
 
-    private String titulo;
+    Professor(String nome, String fone, String cpf,
+               String matricula, String titulo) {
 
-    public Professor(String nome, String fone, String cpf,
-                     int codigo, String funcao, String titulo) {
-
-        super(nome, fone, cpf, codigo, funcao);
+        super(nome, fone, cpf, matricula);
         this.titulo = titulo;
     }
 
-    @Override
-    public void saudacao() {
-        System.out.println("Olá turma! Eu sou o professor " + nome);
+    String ensina() {
+        return nome + " está ensinando.";
     }
 
-    public void ensina() {
-        System.out.println(nome + " está ensinando.");
+    @Override
+    String saudacao() {
+        return "Olá professor " + nome;
     }
 }
