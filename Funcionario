@@ -1,16 +1,27 @@
-class Funcionario extends Pessoa {
-    double cod;
-    String funcao;
+public class Funcionario extends Pessoa {
 
-    Funcionario(String nome, String fone, String cpf,
-                double cod, String funcao) {
+    private String cargo;
 
-        super(nome, fone, cpf);
-        this.cod = cod;
-        this.funcao = funcao;
+    public Funcionario(String nome, int idade, String cargo) {
+        super(nome, idade);
+        this.cargo = cargo;
     }
 
-    String desempenhaFuncao() {
-        return nome + " trabalha como " + funcao;
+    public String getCargo() {
+        return cargo;
+    }
+
+    public void setCargo(String cargo) {
+        this.cargo = cargo;
+    }
+
+    @Override
+    public void apresentacao() {
+        System.out.println("Olá, eu sou o funcionário " + getNome());
+    }
+
+    public void saudacao(Funcionario funcionario) {
+        System.out.println("Olá colega funcionário "
+                + funcionario.getNome());
     }
 }
