@@ -2,35 +2,36 @@ public class Main {
 
     public static void main(String[] args) {
 
-        Aluno aluno = new Aluno(
-                "Carlos",
-                "889999999",
-                "123456",
-                "2025001"
-        );
+        Aluno aluno = new Aluno("Carlos", 16, "Informática");
 
-        Professor professor = new Professor(
-                "Ana",
-                "889888888",
-                "654321",
-                "2024001",
-                "Mestre"
-        );
+        Professor professora =
+                new Professor("Ana", 35, "Matemática");
 
-        Funcionario funcionario = new Funcionario(
-                "Pedro",
-                "889777777",
-                "111222",
-                10,
-                "Secretário"
-        );
+        Funcionario funcionario =
+                new Funcionario("João", 40, "Secretário");
 
-        System.out.println(aluno.saudacao());
-        System.out.println(aluno.aprende());
+        Responsavel responsavel =
+                new Responsavel("Maria", 45, "Mãe");
 
-        System.out.println(professor.saudacao());
-        System.out.println(professor.ensina());
+        Pessoa pessoa =
+                new Pessoa("Pedro", 20);
 
-        System.out.println(funcionario.desempenhaFuncao());
+        aluno.apresentacao();
+        professora.apresentacao();
+        funcionario.apresentacao();
+        responsavel.apresentacao();
+        pessoa.apresentacao();
+
+        System.out.println("-----------");
+
+        aluno.saudacao(aluno);
+
+        professora.saudacao(professora);
+
+        funcionario.saudacao(funcionario);
+
+        responsavel.saudacao(responsavel);
+
+        pessoa.saudacao(aluno);
     }
 }
