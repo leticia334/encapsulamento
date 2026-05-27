@@ -1,10 +1,27 @@
-class Responsavel extends Pessoa {
-    String aluno;
+public class Responsavel extends Pessoa {
 
-    Responsavel(String nome, String fone,
-                String cpf, String aluno) {
+    private String parentesco;
 
-        super(nome, fone, cpf);
-        this.aluno = aluno;
+    public Responsavel(String nome, int idade, String parentesco) {
+        super(nome, idade);
+        this.parentesco = parentesco;
+    }
+
+    public String getParentesco() {
+        return parentesco;
+    }
+
+    public void setParentesco(String parentesco) {
+        this.parentesco = parentesco;
+    }
+
+    @Override
+    public void apresentacao() {
+        System.out.println("Olá, eu sou o responsável " + getNome());
+    }
+
+    public void saudacao(Responsavel responsavel) {
+        System.out.println("Prazer em conhecer o responsável "
+                + responsavel.getNome());
     }
 }
